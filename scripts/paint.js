@@ -1,4 +1,6 @@
-function paint(gridEl, hexes){
+function paint(gridEl, rgbaArrays){
+  const hexes = rgbaArrays.map(rgbaArray => rgbaArray.map(RGBAToHexA))
+  gridEl.innerHTML = ""
   hexes.map(hexArray => {
     const row = document.createElement("div")
     row.classList.add("row")
